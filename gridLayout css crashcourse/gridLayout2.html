@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2</title>
+    <style>
+        .wrapper{
+            display:grid;
+            /* grid-template-columns: 1fr 2fr 1fr; */
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap:1em;
+
+            grid-auto-rows: minmax(100px, auto);
+            /* this will make the cell stretch according to what is needed. here, it stretches by looking at the amount of text */
+        }
+    .wrapper > div{
+        background : #eee;
+        padding:1em;
+    }
+
+    .wrapper > div:nth-child(odd){
+        background:#ddd;
+    }
+    
+    .nested > div{
+        border:#333 1px solid;
+        padding: 1em;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            Lorem ipsum dolor sit.
+
+        </div>
+        <div>
+            Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quae, repellendus repudiandae sed, facere porro reiciendis tempore aliquam officiis optio, odit veniam aut! Modi quam quod a qui aliquam vel libero quibusdam eaque veritatis omnis, et obcaecati dolores, ullam, laborum ab nisi provident. Vel error ipsum aliquid sequi exercitationem tempora sunt doloribus laboriosam ipsam repudiandae ullam nisi ex id ducimus possimus soluta delectus eveniet laborum, voluptatum autem! Totam laudantium mollitia labore omnis voluptas, ad quae natus eum sunt consequatur temporibus.
+        </div>
+
+        <div class="nested">
+            <div>lorem</div>
+            <div>lorem</div>
+            <div>lorem</div>
+            <div>lorem</div>
+            <div>lorem</div>
+            <div>lorem</div>
+            <div>lorem</div>
+        </div>
+        
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+        
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+        
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+        
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+    </div>
+    
+</body>
+</html>
